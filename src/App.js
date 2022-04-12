@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-     <Coins />
+     <Coins coins={coins}/>
     </>
   );
 }
