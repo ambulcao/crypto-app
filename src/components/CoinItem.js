@@ -3,9 +3,9 @@ import React from 'react'
 const CoinItem = (props) => {
   return (
     <div className='coin-row'>
-        <p>{props.coin.market_cap_rank}</p>
+        <p>{props.coins.market_cap_rank}</p>
         <div className='img-symbol'>
-            <img src={props.coins.image} alt='' />
+            <img src={props.coins.image} alt='Imagem Coin' />
             <p>{props.coins.symbol}</p>
         </div>
         <p>{props.coins.current_price}</p>
