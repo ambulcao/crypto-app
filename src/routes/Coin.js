@@ -2,7 +2,9 @@ import React from 'react'
 
 const Coin = () => {
   return (
-    <div>Coin</div>
+    <div>
+      <h1></h1>
+    </div>
   )
 }
 
