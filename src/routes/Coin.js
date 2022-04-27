@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
+import Coins from '../components/Coins'
 
 import './Coin.css'
-import Coins from '../components/Coins'
 
 const Coin = () => {
 
@@ -15,6 +15,7 @@ const Coin = () => {
   useEffect(() => {
     axios.get(url).then((res) => {
       setCoin(res.data)
+        console.log(res.data);
     }).catch((error) => {
       console.log(error)
     })
@@ -22,22 +23,7 @@ const Coin = () => {
 
   return (
     <div>
-      <div className='coin-container'>
-        <div className='content'>
-          <h1>{coin.name}</h1>
-        </div>
-        <div className='content'>
-          <div className='rank'>
-            <span className='rank-btn'>Rank # {coin.market_cap_rank}</span>
-          </div>
-          <div className='info'>
-            <div className='coin-heading'>
-              {coin.image ? <img src={coin.image.small} alt='' /> : null}
-              <p>{coin.name}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>{coin.id}</h1>
     </div>
   )
 }
